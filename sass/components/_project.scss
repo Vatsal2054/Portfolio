@@ -1,10 +1,13 @@
 .project {
     // @include fix-layout;
+    // overflow-x: hidden;
 
     &__content{
         padding: 3rem 4rem;
         background-color: $color-background-darker-1;
         border-radius: 4rem;
+        -webkit-will-change: transform;
+        will-change: transform;
 
         &:not(:last-child){
             margin-bottom: 4rem;

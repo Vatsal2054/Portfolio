@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://vatsalbharkhada.tech/sitemap.xml

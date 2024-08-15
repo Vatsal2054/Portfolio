@@ -9,12 +9,6 @@
 .skill__cell {
   transform: scale(1) translateY(0); }
 
-.move-in-left {
-  transform: translateX(0); }
-
-.move-in-right {
-  transform: translateX(0); }
-
 @keyframes scale-a-lil {
   from {
     width: 20%; } }
@@ -29,7 +23,7 @@
 
 @keyframes move-left {
   from {
-    transform: translateX(20rem); } }
+    clip-path: inset(0 100% 0 0); } }
 
 @keyframes move-right {
   from {
@@ -37,22 +31,17 @@
 
 @media (prefers-reduced-motion: no-preference) {
   .heading-underline {
+    -webkit-animation: scale-a-lil linear both;
     animation: scale-a-lil linear both;
     animation-timeline: view();
     animation-range: 5vh 70vh; }
   .moving-image {
+    -webkit-animation: move-up linear both;
     animation: move-up linear both;
     animation-timeline: view();
     animation-range: 0vh 60vh; }
-  .move-in-left {
-    animation: move-left linear both;
-    animation-timeline: view();
-    animation-range: 10vh 70vh; }
-  .move-in-right {
-    animation: move-right linear both;
-    animation-timeline: view();
-    animation-range: 0vh 50vh; }
   .skill__cell {
+    -webkit-animation: move-up linear both;
     animation: move-up linear both;
     animation-timeline: view();
     animation-range: 10vh 45vh; } }
@@ -313,7 +302,9 @@ body {
 .project__content {
   padding: 3rem 4rem;
   background-color: #e3edf8;
-  border-radius: 4rem; }
+  border-radius: 4rem;
+  -webkit-will-change: transform;
+  will-change: transform; }
   .project__content:not(:last-child) {
     margin-bottom: 4rem; }
 
