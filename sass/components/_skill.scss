@@ -1,0 +1,130 @@
+.skill {
+    // height: 100vh;
+    min-height: 80vh;
+    height: auto;
+    margin: 10% 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10vh 0;
+
+
+    &__content {
+        width: 100%;
+        height: auto;
+        position: relative;
+        display: flex;
+        justify-content: space-evenly;
+        // flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    &__logo {
+        width: 30%;
+        max-width: 10rem;
+        color: $color-black;
+        display: inline-block;
+        // vertical-align: middle;
+        position: absolute;
+        // top: 50%;
+        // left: 50%;
+        // transform: translate(-50%, -50%);
+        opacity: 1;
+        transition: opacity .2s;
+    }
+
+    &__cell {
+        max-width: 30rem;
+        height: 20vh;
+        min-height: 15rem;
+        // width: 25%;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        margin: 3rem 0;
+
+        &--wide{
+            text-align: left;
+            display: block;
+            // width: 48%;
+            // position: absolute;
+            // bottom: 14%;
+            // right: 0;
+        }
+    }
+
+    &__cell:hover &__logo{
+        opacity: 0;
+    }
+    &__cell:hover &__info{
+        visibility: visible;
+        transform: scale(1);
+        opacity: 1;
+    }
+    
+    &__info {
+        width: 100%;
+        display: inline-block;
+        vertical-align: top;
+        padding: 2rem 3rem;
+        // margin: 2rem;
+        background-color: $color-background-darker;
+
+        border: 2px solid $color-grey-light-2;
+        border-radius: 2.5rem;
+
+        visibility: hidden;
+        opacity: 0;
+        transform: scale(.8);
+        transition: all .3s .2s;
+    }
+    
+    &__name {
+        font-family: "Bold2", sans-serif;
+        font-size: responsive-font-size(2);
+    }
+
+    &__list {
+
+
+        li {
+            font-size: responsive-font-size(1.4);
+            // font-family: "Light", sans-serif;
+            list-style-type: none;
+        }
+    }
+}
+
+@media (max-width: 1080px){
+    .skill {
+
+        &__content {
+            justify-content: baseline;
+        }
+
+        &__logo {
+            width: 30%;
+        }
+
+        &__cell {
+            width: 50%;
+            height: 30%;
+            margin: 0 0;
+            padding: .8rem .5rem;
+        }
+
+        &__info {
+            padding: 1.5rem;
+        }
+
+        &__name {
+
+        }
+
+        &__list {
+
+        }
+    }
+}

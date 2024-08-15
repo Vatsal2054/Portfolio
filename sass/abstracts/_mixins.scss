@@ -1,0 +1,13 @@
+@mixin clearfix{
+    &::after{
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+@mixin fix-layout{
+    height: auto;
+    width: 100%;
+    padding: 4rem 12rem;
+}

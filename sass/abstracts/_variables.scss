@@ -1,0 +1,26 @@
+// $color-background: #ece2e4;
+$color-background: #f9f8f4;
+$color-background-darker: #fee5c6;
+$color-background-darker-1: #e3edf8;
+
+$color-grey-light-1: #f7f7f7;
+$color-grey-light-2: #eee;
+
+$color-grey-dark: #777;
+$color-grey-dark-2: #999;
+$color-grey-dark-3: #333;
+
+$color-white: #fff;
+$color-black: #000;
+$color-brown: #6e3e02;
+
+$default-font-size: 1.6rem;
+
+//GRID
+// $grid-width: 114rem;
+// $gutter-vertical: 8rem;
+// $gutter-horizontal: 6rem;
+
+$grid-width: responsive-font-size(114);
+$gutter-vertical: responsive-font-size(8);
+$gutter-horizontal: responsive-font-size(8);

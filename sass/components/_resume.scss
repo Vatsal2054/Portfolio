@@ -1,0 +1,73 @@
+.resume {
+    height: 70vh;
+    display: flex;
+    // align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 8rem;
+
+    &__text {
+        margin: 2rem 0;
+        font-size: responsive-font-size(2);
+    }
+
+    &__links {
+        height: auto;
+        // padding: 0 2rem;
+        margin-bottom: 4rem;
+
+        .download {
+            display: inline-block;
+            transition: all .5s;
+            margin-right: 3rem;
+
+            &,
+            &:link,
+            &:visited {
+                font-size: responsive-font-size(1.5);
+                font-family: "Light", sans-serif;
+                text-decoration: none;
+                padding: 1rem 3rem;
+                background-image: linear-gradient(120deg , $color-background-darker 0%, $color-background-darker 50%, $color-brown 50%, $color-brown 100%);
+                // background-repeat: no-repeat;
+                background-size: 250%;
+                color: $color-grey-dark-3;
+                border-radius: 3rem;
+            }
+            
+            &:hover,
+            &:active {
+                color: $color-white;
+                background-position: 100%;
+                box-shadow: 0 0 3rem rgba($color-brown, .4);
+            }
+            &:hover .download--icon,
+            &:active .download--icon {
+                color: $color-white;
+            }
+            
+            &:focus {
+                transform: translateY(0);
+                border: none;
+            }
+            
+            &--icon {
+                margin: 0rem .4rem -.3rem -.3rem;
+                color: $color-grey-dark-3;
+                transition: all .5s;
+
+                @media (max-width: 768px) {
+                    font-size: 1rem !important;
+                    margin: 0 .2rem -.5rem 0;
+                }
+            }
+
+            img {
+                width: 2.2rem;
+                margin: -.2rem 0 0 -.5rem;
+                vertical-align: middle;
+                color: $color-white;
+            }
+        }
+    }
+}

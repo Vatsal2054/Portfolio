@@ -1,0 +1,39 @@
+.u-regular {
+    font-family: "Regular", sans-serif;
+}
+.u-bold {
+    font-family: "Bold", sans-serif;
+}
+.u-bold2 {
+    font-family: "Bold2", sans-serif;
+}
+.u-heavy {
+    font-family: "Heavy", sans-serif;
+}
+.u-light {
+    font-family: "Light", sans-serif;
+}
+
+.u-margin-bottom-small {
+    margin-bottom: 2rem;
+}
+.u-margin-bottom-medium {
+    margin-bottom: 3rem;
+}
+.u-margin-bottom-large {
+    margin-bottom: 5rem;
+}
+
+
+.u-wavy-underline {
+    text-decoration: underline wavy brown;
+}
+
+
+.u-inline-block {
+    display: inline-block;
+}
+
+.u-big-font {
+    font-size: responsive-font-size(3.6);
+}

@@ -1,0 +1,43 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100vw;
+    height: auto;
+    background-color: transparent;
+    display: block;
+    text-align: center;
+    padding: 2.5rem 0;
+    background-color: rgba($color-background, .6);
+    -moz-backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px); 
+    
+    &__link {
+        // font-family: "Light", sans-serif;
+
+        &:link,
+        &:visited {
+            font-size: 1.6rem;
+            padding: 1rem 3rem;
+            border-radius: 3rem;
+            text-decoration: none;
+            color: $color-grey-dark-3;
+            transition: all .3s;
+
+            @media (max-width: 768px) {
+                font-size: 1.2rem;
+                padding: 1rem;
+            }
+        }
+
+        &:hover {
+            background-color: $color-background-darker;
+        }
+
+        &:not(:last-child){
+            margin-right: responsive-font-size(10);
+        }
+    }
+}

@@ -1,0 +1,85 @@
+.heading-underline {
+    width: 100%;
+    height: 3px;
+    background-color: $color-grey-dark-3;
+}
+
+.moving-image {
+    // transform: translateX(0rem);
+    transform: scale(1) rotate(0deg);
+}
+
+.skill__cell {
+    transform: scale(1) translateY(0);
+    // opacity: 1;
+}
+
+.move-in-left {
+    transform: translateX(0);
+}
+.move-in-right {
+    transform: translateX(0);
+}
+
+@keyframes scale-a-lil {
+    from {
+        width: 20%;
+    }
+}
+
+@keyframes move-a-lil {
+    from {
+        // transform:translateX(10rem);
+        transform: scale(0.2) rotate(-45deg);
+    }
+}
+
+@keyframes move-up {
+    from {
+        // transform:translateX(10rem);
+        transform: scale(0.5) translateY(20rem);
+        // opacity: 0;
+    }
+}
+@keyframes move-left {
+    from {
+        transform: translateX(20rem);
+        // transform: scale(.5) translateY(10rem);
+    }
+}
+@keyframes move-right {
+    from {
+        transform: translateX(-20rem);
+        // transform: scale(.5) translateY(10rem);
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .heading-underline {
+        animation: scale-a-lil linear both;
+        animation-timeline: view();
+        animation-range: 5vh 70vh;
+    }
+
+    .moving-image {
+        animation: move-up linear both;
+        animation-timeline: view();
+        animation-range: 0vh 60vh;
+    }
+    .move-in-left {
+        animation: move-left linear both;
+        animation-timeline: view();
+        animation-range: 10vh 70vh;
+    }
+    .move-in-right {
+        animation: move-right linear both;
+        animation-timeline: view();
+        animation-range: 0vh 50vh;
+    }
+
+    .skill__cell {
+        animation: move-up linear both;
+        animation-timeline: view();
+        animation-range: 10vh 45vh;
+    }
+}
