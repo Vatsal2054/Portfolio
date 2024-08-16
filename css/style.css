@@ -188,6 +188,17 @@ body {
   .intro__container {
     padding-left: clamp(1.42857rem, 1vw + 1rem, 3rem); }
 
+@media (max-width: 1080px) {
+  .intro {
+    height: 100vh; }
+    .intro__container {
+      padding-left: clamp(0.71429rem, 0.5vw + 0.5rem, 1.5rem);
+      margin-bottom: 5rem; }
+      .intro__container .heading-primary {
+        line-height: .9; }
+      .intro__container h1:not(:last-child) {
+        margin-bottom: clamp(0.71429rem, 0.5vw + 0.5rem, 1.5rem); } }
+
 .about {
   height: 100vh;
   display: flex;

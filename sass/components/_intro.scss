@@ -6,11 +6,25 @@
     align-items: center;
 
     &__container{
-        // width: 85%;
-        // position: absolute;
-        // top: 50%;
-        // left: 50%;
-        // transform: translate(-50%, -50%);
         padding-left: responsive-font-size(2);
+    }
+}
+
+@media (max-width: 1080px) {
+    .intro {
+        height: 100vh;
+
+        &__container{
+            padding-left: responsive-font-size(1);
+            margin-bottom: 5rem;
+
+            .heading-primary{
+                line-height: .9;
+            }
+
+            h1:not(:last-child){
+                margin-bottom: responsive-font-size(1);
+            }
+        }
     }
 }
