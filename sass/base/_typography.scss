@@ -19,23 +19,38 @@
     src: url("../../Resources/Anderson_Grotesk/Light.otf") format("opentype");
 }
 
-.heading-secondary {
-    font-size: responsive-font-size(4.5);
-    // font-size: 6rem;
-    font-family: "Bold2", sans-serif;
-    display: inline-block;
+@font-face {
+    font-family: "Mona-sans";
+    src: url("../../Resources/Mona_Sans/Mona-Sans.woff2") format("opentype");
 }
+
 
 .heading-primary {
     font-size: responsive-font-size-header(8);
     // font-size: 10rem;
-    font-family: "Bold2", sans-serif;
+    font-family: "Mona-sans", sans-serif;
+    font-weight: 900;
+    font-stretch: 110%;
+    letter-spacing: -2px;
     // transform: translateX(10rem);
+}
+
+.heading-secondary {
+    font-size: responsive-font-size(4.5);
+    // font-size: 6rem;
+    font-family: "Mona-sans", sans-serif;
+    font-weight: 700;
+    font-stretch: 115%;
+    letter-spacing: -1px;
+    display: inline-block;
 }
 
 .heading-tertiary {
     font-size: responsive-font-size-header(2.8);
-    font-family: "Light", sans-serif;
+    font-family: "Mona-sans", sans-serif;
+    font-weight: 400;
+    font-stretch: 110%;
+    letter-spacing: -1px;
 }
 
 .circle-sketch-highlight {

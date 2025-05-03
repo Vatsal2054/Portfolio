@@ -15,15 +15,17 @@
     }
 
     &__title {
-        font-size: responsive-font-size(3);
-        font-family: "Bold", sans-serif;
-        font-weight: 900;
+        font-size: responsive-font-size(3.2);
+        // font-family: "Bold", sans-serif;
+        padding: 1rem 0;
+        font-weight: 600;
     }
 
     &__info {
         font-size: responsive-font-size(1.8);
-        font-family: "Light", sans-serif;
+        // font-family: "Light", sans-serif;
         // font-weight: 600;
+        letter-spacing: -.5px;
         display: table;
 
         &--left {
@@ -86,7 +88,7 @@
 
         .underline {
             width: 0%;
-            height: 2px;
+            height: 3px;
             // background-color: transparent;
             background-color: $color-black;
             float: left;
@@ -95,7 +97,7 @@
         
         a:hover + .underline {
             width: 100%;
-            height: 2px;
+            height: 3px;
             background-color: $color-black;
         }
     }
@@ -107,6 +109,9 @@
         &__content {
             padding: 2rem;
             border-radius: 2rem;
+        }
+        &__title {
+            padding: 0;
         }
 
         &__info {

@@ -1,6 +1,6 @@
 .heading-underline {
-  width: 100%;
-  height: 3px;
+  width: 80%;
+  height: 4px;
   background-color: #333;
 }
 
@@ -77,20 +77,33 @@
   font-family: "Light";
   src: url("../../Resources/Anderson_Grotesk/Light.otf") format("opentype");
 }
-.heading-secondary {
-  font-size: clamp(3.2142857143rem, 2.25vw + 2.25rem, 6.75rem);
-  font-family: "Bold2", sans-serif;
-  display: inline-block;
+@font-face {
+  font-family: "Mona-sans";
+  src: url("../../Resources/Mona_Sans/Mona-Sans.woff2") format("opentype");
 }
-
 .heading-primary {
   font-size: clamp(4rem, 4vw + 3.2rem, 12rem);
-  font-family: "Bold2", sans-serif;
+  font-family: "Mona-sans", sans-serif;
+  font-weight: 900;
+  font-stretch: 110%;
+  letter-spacing: -2px;
+}
+
+.heading-secondary {
+  font-size: clamp(3.2142857143rem, 2.25vw + 2.25rem, 6.75rem);
+  font-family: "Mona-sans", sans-serif;
+  font-weight: 700;
+  font-stretch: 115%;
+  letter-spacing: -1px;
+  display: inline-block;
 }
 
 .heading-tertiary {
   font-size: clamp(1.4rem, 1.4vw + 1.12rem, 4.2rem);
-  font-family: "Light", sans-serif;
+  font-family: "Mona-sans", sans-serif;
+  font-weight: 400;
+  font-stretch: 110%;
+  letter-spacing: -1px;
 }
 
 .circle-sketch-highlight {
@@ -152,7 +165,7 @@ html {
 
 body {
   box-sizing: border-box;
-  font-family: "Regular", sans-serif;
+  font-family: "Mona-sans", sans-serif;
   background-color: #f9f8f4;
   width: 100vw;
   overflow-x: hidden;
@@ -160,6 +173,8 @@ body {
   display: flex;
   align-items: center;
   flex-direction: column;
+  letter-spacing: -0.5px;
+  font-stretch: 110%;
 }
 body .main-container {
   width: 80vw;
@@ -169,23 +184,29 @@ body .main-container {
 }
 
 .u-regular {
-  font-family: "Regular", sans-serif;
+  font-family: "Mona-sans", sans-serif;
+  font-weight: 500;
 }
 
 .u-bold {
-  font-family: "Bold", sans-serif;
+  font-family: "Mona-sans", sans-serif;
+  font-weight: 600;
 }
 
 .u-bold2 {
-  font-family: "Bold2", sans-serif;
+  font-family: "Mona-sans", sans-serif;
+  font-weight: 700;
 }
 
 .u-heavy {
-  font-family: "Heavy", sans-serif;
+  font-family: "Mona-sans", sans-serif;
+  font-weight: 900;
 }
 
 .u-light {
-  font-family: "Light", sans-serif;
+  font-family: "Mona-sans", sans-serif;
+  font-weight: 400;
+  letter-spacing: -0.5px;
 }
 
 .u-margin-bottom-small {
@@ -266,7 +287,7 @@ body .main-container {
   border-radius: 50%;
 }
 .about__text {
-  font-size: clamp(1.7142857143rem, 1.2vw + 1.2rem, 3.6rem);
+  font-size: clamp(1.5714285714rem, 1.1vw + 1.1rem, 3.3rem);
 }
 .about__text li {
   list-style-type: none;
@@ -323,7 +344,7 @@ body .main-container {
   justify-content: center;
   align-items: center;
   position: relative;
-  margin: 3rem 0;
+  margin: 2rem 0;
 }
 .skill__cell--wide {
   text-align: left;
@@ -341,7 +362,7 @@ body .main-container {
   width: 100%;
   display: inline-block;
   vertical-align: top;
-  padding: 2rem 3rem;
+  padding: 2rem;
   background-color: #fee5c6;
   border: 2px solid #eee;
   border-radius: 2.5rem;
@@ -351,12 +372,15 @@ body .main-container {
   transition: all 0.3s 0.2s;
 }
 .skill__name {
-  font-family: "Bold2", sans-serif;
-  font-size: clamp(1.4285714286rem, 1vw + 1rem, 3rem);
+  font-family: "Mona-sans", sans-serif;
+  font-weight: 800;
+  padding-bottom: 0.5rem;
+  font-size: clamp(1.2857142857rem, 0.9vw + 0.9rem, 2.7rem);
 }
 .skill__list li {
   font-size: clamp(1rem, 0.7vw + 0.7rem, 2.1rem);
-  list-style-type: none;
+  margin-left: 2rem;
+  padding-bottom: 0.5rem;
 }
 
 @media (max-width: 1080px) {
@@ -387,13 +411,13 @@ body .main-container {
   margin-bottom: 4rem;
 }
 .project__title {
-  font-size: clamp(2.1428571429rem, 1.5vw + 1.5rem, 4.5rem);
-  font-family: "Bold", sans-serif;
-  font-weight: 900;
+  font-size: clamp(2.2857142857rem, 1.6vw + 1.6rem, 4.8rem);
+  padding: 1rem 0;
+  font-weight: 600;
 }
 .project__info {
   font-size: clamp(1.2857142857rem, 0.9vw + 0.9rem, 2.7rem);
-  font-family: "Light", sans-serif;
+  letter-spacing: -0.5px;
   display: table;
 }
 .project__info--left {
@@ -434,14 +458,14 @@ body .main-container {
 }
 .project__link .underline {
   width: 0%;
-  height: 2px;
+  height: 3px;
   background-color: #000;
   float: left;
   transition: width 0.6s cubic-bezier(0.86, 0, 0.07, 1);
 }
 .project__link a:hover + .underline {
   width: 100%;
-  height: 2px;
+  height: 3px;
   background-color: #000;
 }
 
@@ -449,6 +473,9 @@ body .main-container {
   .project__content {
     padding: 2rem;
     border-radius: 2rem;
+  }
+  .project__title {
+    padding: 0;
   }
   .project__info {
     display: flex;
@@ -497,7 +524,7 @@ body .main-container {
 }
 .resume__links .download, .resume__links .download:link, .resume__links .download:visited {
   font-size: clamp(1.0714285714rem, 0.75vw + 0.75rem, 2.25rem);
-  font-family: "Light", sans-serif;
+  font-family: "Mona-sans", sans-serif;
   text-decoration: none;
   padding: 1rem 3rem;
   background-image: linear-gradient(120deg, #fee5c6 0%, #fee5c6 50%, #6e3e02 50%, #6e3e02 100%);
@@ -605,7 +632,7 @@ body .main-container {
 }
 .footer__head h3 {
   font-size: clamp(5rem, 3.5vw + 3.5rem, 10.5rem);
-  font-family: "Light", sans-serif;
+  font-family: "Mona-sans", sans-serif;
 }
 .footer__content {
   display: table;

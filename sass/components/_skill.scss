@@ -43,7 +43,7 @@
         justify-content: center;
         align-items: center;
         position: relative;
-        margin: 3rem 0;
+        margin: 2rem 0;
 
         &--wide{
             text-align: left;
@@ -68,7 +68,7 @@
         width: 100%;
         display: inline-block;
         vertical-align: top;
-        padding: 2rem 3rem;
+        padding: 2rem;
         // margin: 2rem;
         background-color: $color-background-darker;
 
@@ -82,8 +82,10 @@
     }
     
     &__name {
-        font-family: "Bold2", sans-serif;
-        font-size: responsive-font-size(2);
+        font-family: "Mona-sans", sans-serif;
+        font-weight: 800;
+        padding-bottom: .5rem;
+        font-size: responsive-font-size(1.8);
     }
 
     &__list {
@@ -92,7 +94,9 @@
         li {
             font-size: responsive-font-size(1.4);
             // font-family: "Light", sans-serif;
-            list-style-type: none;
+            // list-style-type: none;
+            margin-left: 2rem;
+            padding-bottom: .5rem;
         }
     }
 }
